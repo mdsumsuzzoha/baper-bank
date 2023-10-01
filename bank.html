@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inside of bank</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.8.2/dist/full.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <header>
+        <h1 class="text-4xl	font-bold text-center mt-12 mb-5">Here is ur <span class="text-green-700">Baper Bank!!!
+            </span>
+        </h1>
+    </header>
+
+    <section>
+        <div class="flex justify-center gap-5 my-6">
+            <!-- Deposite card -->
+            <div class="card w-96 bg-green-300 shadow-xl">
+                <div class="card-body text-white" id="deposite-container">
+                    <h2 class="card-title">Deposite</h2>
+                    <p>$<span id="deposite-amount">00</span></p>
+                </div>
+            </div>
+            <!-- Withdraw card -->
+            <div class="card w-96 bg-pink-300 shadow-xl">
+                <div class="card-body text-white">
+                    <h2 class="card-title">Withdraw</h2>
+                    <p>$<span id="withdraw-amount">00</span></p>
+                </div>
+            </div>
+            <!-- balance card -->
+            <div class="card w-96 bg-blue-300 shadow-xl">
+                <div id="balance-container" class="card-body text-white">
+                    <h2 class="card-title">Balance</h2>
+                    <p>$<span id="balance-amount">00</span></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex justify-center gap-5 mt-6">
+            <div class="card w-96 bg-blue-200 shadow-xl">
+                <div class="card-body">
+                    <h2 class="card-title">Deposite here</h2>
+                    <input type="text" name="" id="input-deposite" class="rounded"
+                        placeholder="$ amount you want to Deposite">
+                    <button id="btn-deposite"
+                        class="bg-amber-500 py-2 rounded text-white text-2xl hover:bg-sky-700">Deposite</button>
+                </div>
+            </div>
+            <div class="card w-96 bg-blue-200 shadow-xl">
+                <div class="card-body">
+                    <h2 class="card-title">Withdraw here</h2>
+                    <input type="text" name="" id="input-withdraw" class="rounded"
+                        placeholder="$ amount you want to withdraw">
+                    <button id="btn-withdraw"
+                        class="bg-amber-500 py-2 rounded text-white text-2xl hover:bg-sky-700">Withdraw</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<script src="./js/deposite.js"></script>
+<script src="./js/withdraw.js"></script>
+
+</body>
+
+</html>

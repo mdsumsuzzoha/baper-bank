@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baper Bank</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.8.2/dist/full.css" rel="stylesheet" type="text/css" />
+
+
+</head>
+
+<body>
+    <header>
+        <h1 class="text-4xl	font-bold text-center mt-12 mb-5">Welcome to ur <span class="text-green-700">Baper
+                Bank!!!</span>
+        </h1>
+    </header>
+    <section class="w-6/12 mx-auto rounded bg-lime-200	p-10 text-center">
+        <p>baperbank@bank.com</p>
+        <p>Baperbank</p>
+        <h4 class="text-2xl font-bold">Please login</h4>
+        <div class="w-9/12 mx-auto">
+            <input class="w-full block my-4 p-2 rounded" type="email" name="" id="input-email"
+                placeholder="Enter your Email">
+            <input class="w-full block my-4 p-2 rounded" type="password" name="" id="input-password"
+                placeholder="Enter your Passward">
+            <button id="btn-login"
+                class="bg-amber-700 px-6 py-2 rounded text-white text-2xl hover:bg-sky-700">Submit</button>
+        </div>
+    </section>
+
+    <script>
+        document.getElementById('btn-login').addEventListener('click', function () {
+            const emailField = document.getElementById('input-email');
+            const inputEmail = emailField.value
+
+            const passwordField = document.getElementById('input-password');
+            const inputPassword = passwordField.value;
+
+            console.log(inputEmail, inputPassword);
+
+            // emailField.value = "";
+            // passwordField.value = "";
+
+            // do not veryfi email and password in client site. it must be verify in admin site
+
+            // but now consider as learning stages 
+            if (inputEmail === "baperbank@bank.com" && inputPassword === "Baperbank") {
+                location.href = "bank.html";
+                // console.log('valid User');
+            }
+            else {
+                alert("Input email or password correctly")
+                    // ; console.log('invalid User');
+
+            }
+
+        })
+    </script>
+
+   
+
+</body>
+
+</html>
